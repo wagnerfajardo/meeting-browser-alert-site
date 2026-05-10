@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Politica de Privacidade | Meeting Browser Alert</title>
+    <meta name="description" content="Politica de privacidade do Meeting Browser Alert.">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --ink: #102033;
+        --muted: #526173;
+        --line: #dce4ee;
+        --accent: #198f86;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--bg);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      article {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+        padding: clamp(24px, 5vw, 48px);
+        box-shadow: 0 20px 60px rgba(16, 32, 51, 0.08);
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .updated {
+        margin: 16px 0 32px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 22px;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      code {
+        border-radius: 5px;
+        background: #eef4f8;
+        padding: 2px 5px;
+        color: #0b5f5a;
+        font-size: 0.94em;
+      }
+
+      footer {
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <p class="eyebrow">Meeting Browser Alert</p>
+        <h1>Politica de Privacidade</h1>
+        <p class="updated">Ultima atualizacao: 10 de maio de 2026</p>
+
+        <h2>Visao Geral</h2>
+        <p>Meeting Browser Alert ajuda o usuario a perceber reunioes proximas diretamente no navegador. A extensao le eventos do calendario conectado apenas para calcular alertas visuais e permitir acesso rapido ao link da reuniao.</p>
+
+        <h2>Dados Acessados</h2>
+        <p>Quando o usuario conecta o Google Calendar, a extensao pode ler:</p>
+        <ul>
+          <li>titulo do evento;</li>
+          <li>horario de inicio e termino;</li>
+          <li>link de reuniao, quando disponivel;</li>
+          <li>informacoes basicas necessarias para identificar a plataforma da reuniao.</li>
+        </ul>
+        <p>A extensao nao solicita permissao para criar, editar ou excluir eventos.</p>
+
+        <h2>Como Os Dados Sao Usados</h2>
+        <p>Os dados sao usados para:</p>
+        <ul>
+          <li>mostrar o proximo compromisso no popup;</li>
+          <li>exibir um alerta visual em paginas abertas;</li>
+          <li>abrir o link da reuniao quando o usuario clica em Entrar;</li>
+          <li>lembrar o usuario quando uma reuniao ja iniciou dentro da janela configurada.</li>
+        </ul>
+
+        <h2>Armazenamento</h2>
+        <p>As configuracoes, cache temporario de eventos, alertas dispensados e preferencias ficam no navegador do usuario usando <code>chrome.storage.local</code>.</p>
+
+        <h2>Compartilhamento De Dados</h2>
+        <p>Meeting Browser Alert nao vende dados, nao compartilha dados com terceiros, nao usa analytics e nao envia eventos de calendario para servidores proprios nesta versao.</p>
+
+        <h2>Permissoes Do Navegador</h2>
+        <p>A extensao usa:</p>
+        <ul>
+          <li><code>identity</code> para conectar ao Google Calendar com OAuth;</li>
+          <li><code>storage</code> para salvar preferencias locais;</li>
+          <li><code>alarms</code> para verificar periodicamente reunioes proximas;</li>
+          <li><code>tabs</code> para detectar se o link de uma reuniao ja esta aberto;</li>
+          <li><code>offscreen</code> para tocar alertas sonoros curtos;</li>
+          <li>acesso a <code>https://www.googleapis.com/*</code> para ler eventos do Google Calendar;</li>
+          <li>content script em paginas <code>http</code> e <code>https</code> para exibir o alerta visual.</li>
+        </ul>
+
+        <h2>Controle Do Usuario</h2>
+        <p>O usuario pode:</p>
+        <ul>
+          <li>pausar os alertas;</li>
+          <li>desativar som;</li>
+          <li>desativar overlay e efeitos visuais;</li>
+          <li>trocar o idioma;</li>
+          <li>dispensar alertas;</li>
+          <li>desconectar o Google Calendar.</li>
+        </ul>
+
+        <h2>Contato</h2>
+        <p>Para duvidas de privacidade ou suporte, use o canal de contato informado na Chrome Web Store.</p>
+
+        <footer>
+          Esta pagina descreve a politica de privacidade da versao inicial do Meeting Browser Alert.
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
