@@ -1,29 +1,69 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meeting Browser Alert</title>
-    <link rel="canonical" href="privacy-policy.html">
+    <meta name="description" content="Meeting Browser Alert shows visual browser alerts for upcoming meetings.">
+    <meta name="google-site-verification" content="hxpA3HCfi9mnBqyuFbG-Xa6CiFMkLPyOMt3a2-QeRus">
+    <link rel="privacy-policy" href="https://wagnerfajardo.github.io/meeting-browser-alert-site/privacy-policy.html">
     <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --ink: #102033;
+        --muted: #526173;
+        --line: #dce4ee;
+        --accent: #198f86;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
-        color: #102033;
-        background: #f6f8fb;
+        color: var(--ink);
+        background: var(--bg);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         line-height: 1.6;
       }
 
       main {
-        width: min(720px, calc(100% - 32px));
+        width: min(880px, calc(100% - 32px));
         margin: 0 auto;
         padding: 56px 0;
       }
 
+      section {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+        padding: clamp(24px, 5vw, 48px);
+        box-shadow: 0 20px 60px rgba(16, 32, 51, 0.08);
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
       h1 {
-        margin: 0 0 16px;
-        font-size: 36px;
-        line-height: 1.1;
+        margin: 0;
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 17px;
       }
 
       ul {
@@ -31,20 +71,43 @@
         padding-left: 22px;
       }
 
+      li {
+        margin: 8px 0;
+      }
+
       a {
-        color: #0b5f5a;
+        color: #0b6f69;
         font-weight: 700;
+      }
+
+      footer {
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Meeting Browser Alert</h1>
-      <p>Documentos publicos da extensao.</p>
-      <ul>
-        <li><a href="privacy-policy.html">Politica de Privacidade</a></li>
-        <li><a href="terms-of-service.html">Termos de Servico</a></li>
-      </ul>
+      <section>
+        <p class="eyebrow">Meeting Browser Alert</p>
+        <h1>Visual meeting alerts in your browser</h1>
+        <p>Meeting Browser Alert is a Chrome extension that helps users notice upcoming meetings directly in open tabs, using configurable visual and sound alerts.</p>
+
+        <ul>
+          <li>Reads Google Calendar events only with the user's permission.</li>
+          <li>Uses calendar data only to calculate local alerts.</li>
+          <li>Does not sell, share, or send calendar events to its own servers.</li>
+        </ul>
+
+        <footer>
+          <a href="https://wagnerfajardo.github.io/meeting-browser-alert-site/privacy-policy.html">Privacy Policy</a>
+          |
+          <a href="https://wagnerfajardo.github.io/meeting-browser-alert-site/terms-of-service.html">Terms of Service</a>
+        </footer>
+      </section>
     </main>
   </body>
 </html>
