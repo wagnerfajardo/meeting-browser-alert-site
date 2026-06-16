@@ -1,191 +1,292 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Privacy Policy | Meeting Browser Alert</title>
-    <meta name="description" content="Privacy policy for Meeting Browser Alert.">
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f6f8fb;
-        --panel: #ffffff;
-        --ink: #102033;
-        --muted: #526173;
-        --line: #dce4ee;
-        --accent: #198f86;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Meeting Browser Alert</title>
+  <meta name="description" content="Privacy policy for Meeting Browser Alert.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-      * {
-        box-sizing: border-box;
-      }
+    :root {
+      --teal: #198f86;
+      --teal-dark: #0f6b64;
+      --navy: #0c1f30;
+      --ink: #102033;
+      --muted: #526173;
+      --line: #dce4ee;
+      --bg: #f0f4f8;
+      --white: #ffffff;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
 
-      body {
-        margin: 0;
-        color: var(--ink);
-        background: var(--bg);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-      }
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
 
-      main {
-        width: min(880px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 56px 0;
-      }
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(16px, 5vw, 48px);
+      height: 60px;
+      background: rgba(12, 31, 48, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
 
-      article {
-        border: 1px solid var(--line);
-        border-radius: 10px;
-        background: var(--panel);
-        padding: clamp(24px, 5vw, 48px);
-        box-shadow: 0 20px 60px rgba(16, 32, 51, 0.08);
-      }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-      .eyebrow {
-        margin: 0 0 8px;
-        color: var(--accent);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 16px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-nav:hover { background: var(--teal-dark); }
 
-      h1 {
-        margin: 0;
-        font-size: clamp(32px, 5vw, 48px);
-        line-height: 1.05;
-        letter-spacing: 0;
-      }
+    /* CONTENT */
+    main {
+      width: min(800px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
 
-      .updated {
-        margin: 16px 0 32px;
-        color: var(--muted);
-        font-size: 15px;
-      }
+    article {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+      padding: clamp(28px, 5vw, 56px);
+      box-shadow: 0 4px 24px rgba(16, 32, 51, 0.07);
+    }
 
-      h2 {
-        margin: 34px 0 10px;
-        font-size: 22px;
-        line-height: 1.25;
-        letter-spacing: 0;
-      }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
 
-      p {
-        margin: 0 0 14px;
-      }
+    h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
 
-      ul {
-        margin: 0 0 16px;
-        padding-left: 22px;
-      }
+    .updated {
+      margin: 14px 0 36px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-      li {
-        margin: 6px 0;
-      }
+    h2 {
+      margin: 36px 0 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+    }
 
-      code {
-        border-radius: 5px;
-        background: #eef4f8;
-        padding: 2px 5px;
-        color: #0b5f5a;
-        font-size: 0.94em;
-      }
+    p { margin: 0 0 14px; color: var(--ink); font-size: 15px; }
 
-      footer {
-        margin-top: 28px;
-        padding-top: 20px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-        font-size: 14px;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <article>
-        <p class="eyebrow">Meeting Browser Alert</p>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: June 10, 2026</p>
+    ul {
+      margin: 0 0 16px;
+      padding-left: 22px;
+    }
 
-        <h2>Overview</h2>
-        <p>Meeting Browser Alert helps users notice upcoming meetings directly in the browser. The extension reads events from the connected calendar only to calculate visual alerts and provide quick access to the meeting link.</p>
+    li {
+      margin: 6px 0;
+      font-size: 15px;
+      color: var(--ink);
+    }
 
-        <h2>Data Accessed</h2>
-        <p>When the user connects Google Calendar, the extension may read:</p>
-        <ul>
-          <li>event title;</li>
-          <li>start and end time;</li>
-          <li>meeting link, when available;</li>
-          <li>basic information needed to identify the meeting platform.</li>
-        </ul>
-        <p>The extension does not request permission to create, edit, or delete events.</p>
+    code {
+      border-radius: 5px;
+      background: #eef4f8;
+      padding: 2px 6px;
+      color: #0b5f5a;
+      font-size: 0.9em;
+    }
 
-        <h2>How Data Is Used</h2>
-        <p>The data is used to:</p>
-        <ul>
-          <li>show the next appointment in the popup;</li>
-          <li>display a visual alert on open pages;</li>
-          <li>open the meeting link when the user clicks Join;</li>
-          <li>remind the user when a meeting has already started within the configured window.</li>
-        </ul>
+    .doc-footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-        <h2>Storage</h2>
-        <p>Settings, temporary event cache, dismissed alerts, and preferences stay in the user's browser using <code>chrome.storage.local</code>.</p>
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 24px clamp(16px, 5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-        <h2>Data Protection</h2>
-        <p>Calendar data is protected through the following mechanisms:</p>
-        <ul>
-          <li>All processing happens locally inside the user's browser — no calendar data is transmitted to external servers.</li>
-          <li>Authentication is handled exclusively through Google's OAuth 2.0 flow via Chrome's built-in <code>chrome.identity</code> API. The extension never sees or stores the user's Google account password.</li>
-          <li>OAuth access tokens are managed and stored securely by the Chrome browser, not by the extension itself.</li>
-          <li>Temporary event data is stored only in <code>chrome.storage.local</code>, which is sandboxed to the extension and inaccessible to websites or other extensions.</li>
-          <li>The extension requests only read-only access to calendar events (<code>https://www.googleapis.com/auth/calendar.readonly</code>), limiting the scope of accessible data to the minimum necessary.</li>
-        </ul>
+    footer span {
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+    }
 
-        <h2>Data Retention and Deletion</h2>
-        <p>Google user data is retained only as long as necessary to display alerts:</p>
-        <ul>
-          <li>The event cache is temporary and is refreshed periodically; events that have already passed are not retained.</li>
-          <li>No calendar data is written to persistent storage beyond the browser's local extension storage (<code>chrome.storage.local</code>).</li>
-          <li>The user can delete all Google user data at any time by disconnecting Google Calendar in the extension's options page. This revokes the OAuth token and clears all cached events and preferences.</li>
-          <li>Uninstalling the extension permanently removes all locally stored data, including any cached events and settings.</li>
-          <li>The extension does not retain any Google user data after the connection is revoked or the extension is uninstalled.</li>
-        </ul>
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
 
-        <h2>Data Sharing</h2>
-        <p>Meeting Browser Alert does not sell data, does not share data with third parties, does not use analytics, and does not send calendar events to its own servers in this version.</p>
+    footer a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    footer a:hover { color: #fff; }
 
-        <h2>Browser Permissions</h2>
-        <p>The extension uses:</p>
-        <ul>
-          <li><code>identity</code> to connect to Google Calendar with OAuth;</li>
-          <li><code>storage</code> to save local preferences;</li>
-          <li><code>alarms</code> to periodically check upcoming meetings;</li>
-          <li><code>tabs</code> to detect whether a meeting link is already open;</li>
-          <li><code>offscreen</code> to play short sound alerts;</li>
-          <li>access to <code>https://www.googleapis.com/*</code> to read Google Calendar events;</li>
-          <li>content scripts on <code>http</code> and <code>https</code> pages to display the visual alert.</li>
-        </ul>
+    @media (max-width: 560px) {
+      footer { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
 
-        <h2>User Control</h2>
-        <p>The user can:</p>
-        <ul>
-          <li>pause alerts;</li>
-          <li>disable sound;</li>
-          <li>disable overlay and visual effects;</li>
-          <li>change the language;</li>
-          <li>dismiss alerts;</li>
-          <li>disconnect Google Calendar.</li>
-        </ul>
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5ecfc8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2"/>
+      <path d="M8 21h8M12 17v4"/>
+      <circle cx="16" cy="10" r="3" fill="rgba(25,143,134,0.25)" stroke="#5ecfc8"/>
+      <path d="M16 8.5V10l1 1" stroke-width="1.5"/>
+    </svg>
+    Meeting Browser Alert
+  </a>
+  <a href="https://chromewebstore.google.com/detail/meeting-browser-alert/mclhmchhdchigdhojdfcdhiikaciioli" class="btn-nav">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+    Add to Chrome
+  </a>
+</nav>
 
-        <h2>Contact</h2>
-        <p>For privacy questions or support, use the contact channel listed in the Chrome Web Store.</p>
+<main>
+  <article>
+    <p class="eyebrow">Meeting Browser Alert</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 10, 2026</p>
 
-        <footer>
-          This page describes the privacy policy for Meeting Browser Alert.
-        </footer>
-      </article>
-    </main>
-  </body>
+    <h2>Overview</h2>
+    <p>Meeting Browser Alert helps users notice upcoming meetings directly in the browser. The extension reads events from the connected calendar only to calculate visual alerts and provide quick access to the meeting link.</p>
+
+    <h2>Data Accessed</h2>
+    <p>When the user connects Google Calendar, the extension may read:</p>
+    <ul>
+      <li>event title;</li>
+      <li>start and end time;</li>
+      <li>meeting link, when available;</li>
+      <li>basic information needed to identify the meeting platform.</li>
+    </ul>
+    <p>The extension does not request permission to create, edit, or delete events.</p>
+
+    <h2>How Data Is Used</h2>
+    <p>The data is used to:</p>
+    <ul>
+      <li>show the next appointment in the popup;</li>
+      <li>display a visual alert on open pages;</li>
+      <li>open the meeting link when the user clicks Join;</li>
+      <li>remind the user when a meeting has already started within the configured window.</li>
+    </ul>
+
+    <h2>Storage</h2>
+    <p>Settings, temporary event cache, dismissed alerts, and preferences stay in the user's browser using <code>chrome.storage.local</code>.</p>
+
+    <h2>Data Protection</h2>
+    <p>Calendar data is protected through the following mechanisms:</p>
+    <ul>
+      <li>All processing happens locally inside the user's browser — no calendar data is transmitted to external servers.</li>
+      <li>Authentication is handled exclusively through Google's OAuth 2.0 flow via Chrome's built-in <code>chrome.identity</code> API. The extension never sees or stores the user's Google account password.</li>
+      <li>OAuth access tokens are managed and stored securely by the Chrome browser, not by the extension itself.</li>
+      <li>Temporary event data is stored only in <code>chrome.storage.local</code>, which is sandboxed to the extension and inaccessible to websites or other extensions.</li>
+      <li>The extension requests only read-only access to calendar events (<code>https://www.googleapis.com/auth/calendar.readonly</code>), limiting the scope of accessible data to the minimum necessary.</li>
+    </ul>
+
+    <h2>Data Retention and Deletion</h2>
+    <p>Google user data is retained only as long as necessary to display alerts:</p>
+    <ul>
+      <li>The event cache is temporary and is refreshed periodically; events that have already passed are not retained.</li>
+      <li>No calendar data is written to persistent storage beyond the browser's local extension storage (<code>chrome.storage.local</code>).</li>
+      <li>The user can delete all Google user data at any time by disconnecting Google Calendar in the extension's options page. This revokes the OAuth token and clears all cached events and preferences.</li>
+      <li>Uninstalling the extension permanently removes all locally stored data, including any cached events and settings.</li>
+      <li>The extension does not retain any Google user data after the connection is revoked or the extension is uninstalled.</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p>Meeting Browser Alert does not sell data, does not share data with third parties, does not use analytics, and does not send calendar events to its own servers in this version.</p>
+
+    <h2>Browser Permissions</h2>
+    <p>The extension uses:</p>
+    <ul>
+      <li><code>identity</code> to connect to Google Calendar with OAuth;</li>
+      <li><code>storage</code> to save local preferences;</li>
+      <li><code>alarms</code> to periodically check upcoming meetings;</li>
+      <li><code>tabs</code> to detect whether a meeting link is already open;</li>
+      <li><code>offscreen</code> to play short sound alerts;</li>
+      <li>access to <code>https://www.googleapis.com/*</code> to read Google Calendar events;</li>
+      <li>content scripts on <code>http</code> and <code>https</code> pages to display the visual alert.</li>
+    </ul>
+
+    <h2>User Control</h2>
+    <p>The user can:</p>
+    <ul>
+      <li>pause alerts;</li>
+      <li>disable sound;</li>
+      <li>disable overlay and visual effects;</li>
+      <li>change the language;</li>
+      <li>dismiss alerts;</li>
+      <li>disconnect Google Calendar.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>For privacy questions or support, use the contact channel listed in the Chrome Web Store.</p>
+
+    <div class="doc-footer">
+      This page describes the privacy policy for Meeting Browser Alert.
+    </div>
+  </article>
+</main>
+
+<footer>
+  <span>© 2026 Meeting Browser Alert</span>
+  <div class="footer-links">
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms-of-service.html">Terms of Service</a>
+  </div>
+</footer>
+
+</body>
 </html>
